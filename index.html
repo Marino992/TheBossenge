@@ -515,7 +515,7 @@
     overlay.id = 'start-overlay';
     overlay.innerHTML = `
         <div class="vox-title">BOSSENGE</div>
-        <button class="btn-init" id="start-trigger">INIZIA, RUOTA IN ORIZZONTALE LO SCHERMO</button>
+        <button class="btn-init" id="start-trigger">INIZIA, RUOTA IN ORIZZONTALE LO SCHERMO E COLPISCI GLI OCCHI</button>
         <div class="status-load">Hardware check: OK | Connection: SECURE | Target: VOX</div>
     `;
     document.body.appendChild(overlay);
@@ -570,10 +570,10 @@
         }
 
         // Messaggio personalizzato in base al risultato
-        if (statusText.innerText === "BOSSENGE DELETED") {
-            scoreDisplay.innerHTML = `TOTAL_DAMAGE: 100%<br><span style="font-size:12px">SYSTEM_ERASED</span>`;
+        if (statusText.innerText === "BOSSENGE SCONFITTO") {
+            scoreDisplay.innerHTML = `DANNI SUBITI DAL BOSS: 100%<br><span style="font-size:12px">SYSTEM_ERASED</span>`;
         } else {
-            scoreDisplay.innerHTML = `TOTAL_DAMAGE: ${damageDealt}%<br><span style="font-size:12px">BOSSENGE_INTEGRITY_REMAINING: ${currentHealthPercent.toFixed(1)}%</span>`;
+            scoreDisplay.innerHTML = `DANNI SUBITI DAL BOSS': ${damageDealt}%<br><span style="font-size:12px"SALUTE RESTANTE AL BOSS: ${currentHealthPercent.toFixed(1)}%</span>`;
         }
     };
 
